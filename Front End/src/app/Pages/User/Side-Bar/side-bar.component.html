@@ -1,0 +1,28 @@
+<mat-card style="width: 100%;">
+    <h2 mat-subheader class="text-center">Menu</h2>
+
+    <mat-action-list>
+        <mat-divider></mat-divider>
+
+        <button routerLink="/user-dash/history" mat-list-item class="butt1"><mat-icon
+                mat-list-icon>history</mat-icon>Quiz
+            History</button>
+
+        <mat-divider></mat-divider>
+
+        <button routerLink="/user-dash/0" mat-list-item class="butt1"><mat-icon mat-list-icon>home</mat-icon>All
+            Quizes</button>
+
+
+        <mat-divider></mat-divider>
+
+    </mat-action-list>
+
+    <mat-action-list role="menu" *ngFor="let cat of categories">
+
+        <button [routerLink]="'/user-dash/'+cat.cid" routerLink="categories" mat-list-item class="butt1 pd"><mat-icon
+                mat-list-icon>quiz</mat-icon>{{cat.title}}</button>
+        <mat-divider></mat-divider>
+    </mat-action-list>
+
+</mat-card>

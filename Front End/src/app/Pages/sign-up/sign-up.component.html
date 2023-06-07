@@ -1,0 +1,95 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+
+                    <div class="container img text-center mt-3">
+                        <img src="../../../assets/logo.jpg" height="120px;" width="150px" alt="">
+                    </div>
+
+                    <h1 class="text-center">Register Here !!</h1>
+
+
+                    <form #form="ngForm" (ngSubmit)="formSubmit()">
+
+                        <!-- Fierst name -->
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>First Name</mat-label>
+                            <input required #name="ngModel" name="firstname" [(ngModel)]="user.firstname" matInput
+                                placeholder="Enter here">
+                            <mat-icon matSuffix color="primary">account_circle</mat-icon>
+                            <mat-hint *ngIf="name.invalid && name.touched" class="error">Name Should not
+                                Empty</mat-hint>
+                        </mat-form-field>
+
+                        <!-- Last Name -->
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>Last Name</mat-label>
+                            <input required #last="ngModel" name="lastname" [(ngModel)]="user.lastname" matInput
+                                placeholder="Enter here">
+                            <mat-icon matSuffix color="primary">account_circle</mat-icon>
+                            <mat-hint *ngIf="last.invalid && last.touched" class="error">Last Name Should not
+                                Empty</mat-hint>
+
+                        </mat-form-field>
+
+                        <!-- Email -->
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>Email</mat-label>
+                            <input required #email="ngModel" name="email" [(ngModel)]="user.email" type="email" matInput
+                                placeholder="Enter here">
+                            <mat-icon matSuffix color="primary">email</mat-icon>
+                            <mat-hint *ngIf="email.invalid && email.touched" class="error">Email Should not
+                                Empty</mat-hint>
+
+                        </mat-form-field>
+
+                        <!-- Phone number -->
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>Phone Number</mat-label>
+                            <input name="phone" [(ngModel)]="user.phone" type="number" matInput
+                                placeholder="Enter here">
+                            <mat-icon matSuffix color="primary">phone</mat-icon>
+
+                        </mat-form-field>
+
+                        <!-- UserName -->
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>User Name</mat-label>
+                            <input required #username="ngModel" name="username" [(ngModel)]="user.username" matInput
+                                placeholder="Enter here">
+                            <mat-icon matSuffix color="primary">account_circle</mat-icon>
+                            <mat-hint *ngIf="username.invalid && username.touched" class="error">Username Should not
+                                Empty</mat-hint>
+
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>Password</mat-label>
+                            <input required #password="ngModel" matInput [type]="hide ? 'password' : 'text'"
+                                [(ngModel)]="user.password" name="password" placeholder="Enter here">
+                            <span style="margin-right: 10px;" type="menu" mat-icon-button matSuffix
+                                (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon color="warn">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </span>
+                            <mat-hint *ngIf="password.invalid && password.touched" class="error">Password Should not
+                                Empty</mat-hint>
+                        </mat-form-field>
+                        <div class="container text-center mb-3">
+
+                            <button type="submit" mat-raised-button color="primary"
+                                [disabled]="form.invalid">Register</button>
+                            <button style="margin-left: 20px;" type="reset" mat-raised-button
+                                color="warn">Reset</button>
+                        </div>
+                    </form>
+
+                </mat-card>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

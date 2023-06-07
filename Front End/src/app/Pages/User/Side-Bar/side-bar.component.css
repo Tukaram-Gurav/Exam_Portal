@@ -1,0 +1,20 @@
+.butt1 mat-icon
+{
+  display: inline-block;
+  margin-bottom: -5px;
+  margin-right: 12px;
+  /* cursor: pointer; */
+  margin-left: 20px;
+}
+.butt1
+{
+  /* display: inline-block;
+  margin-bottom: -5px;
+  margin-right: 12px; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pd
+{
+  margin-top: -8px;
+}

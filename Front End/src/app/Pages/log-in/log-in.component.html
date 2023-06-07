@@ -1,0 +1,53 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+
+
+
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="mt-5">
+                    <div class="container img text-center mt-3">
+                        <img src="../../../assets/logo.jpg" height="120px;" width="150px" alt="">
+                    </div>
+                    <h1 class="text-center">Log in</h1>
+
+
+                    <form (ngSubmit)="formsubmit()">
+
+                        <!-- UserName -->
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>User Name</mat-label>
+                            <input [(ngModel)]="loginData.username" name="username" matInput placeholder="Enter here">
+                            <mat-icon matSuffix color="primary">account_circle</mat-icon>
+                        </mat-form-field>
+
+
+                        <!-- Password -->
+                        <mat-form-field appearance="outline" class="fullwidth">
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="loginData.password"
+                                name="password" placeholder="Enter here">
+                            <span style="margin-right: 10px;" mat-icon-button matSuffix (click)="hide = !hide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon color="warn">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </span>
+                        </mat-form-field>
+                        <div class="container text-center">
+                            <h3 routerLink="/signup" class="link">Dont have an account ? Sign up</h3>
+                        </div>
+                        <div class="container text-center mb-3">
+
+                            <button type="submit" mat-raised-button color="primary">Login</button>
+                            <button style="margin-left: 20px;" type="reset" mat-raised-button
+                                color="warn">Reset</button>
+                        </div>
+                    </form>
+
+                </mat-card>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<!-- <mat-card class="" style="width: 100%;">
+   <h2 mat-subheader class="text-center">Menu</h2>
+    <mat-list role="menu" class="menu">
+   <hr>
+    <div routerLink="/admin" mat-list-item class="butt1 ml20"><mat-icon mat-list-icon >home</mat-icon><span>Home</span></div><hr>
+    <div style="margin-top: 20px;" routerLink="profile" mat-list-item class="butt1 ml20"><mat-icon mat-list-icon>account_circle</mat-icon><span>User</span></div><hr>
+    <div style="margin-top: 20px;" routerLink="categories" mat-list-item class="butt1 ml20"><mat-icon mat-list-icon>category</mat-icon><span>Categories</span></div><hr>
+    <div style="margin-top: 20px;" routerLink="add-categories" mat-list-item class="butt1 ml20"><mat-icon mat-list-icon>add_box</mat-icon><span>Add Categories</span></div><hr>
+    <div style="margin-top: 20px;" routerLink="quizes" mat-list-item class="butt1 ml20"><mat-icon mat-list-icon>quiz</mat-icon><span>Quizes</span></div><hr>
+    <div style="margin-top: 20px;" routerLink="add-quiz" mat-list-item class="butt1 ml20"><mat-icon mat-list-icon>add_circle_outline</mat-icon><span>Quiz</span></div><hr>
+    <div style="margin-top: 20px;" routerLink="profile" mat-list-item class="butt1 ml20" (click)="logout()"><mat-icon mat-list-icon >logout</mat-icon><span>Logout</span></div>
+    </mat-list>
+    
+</mat-card> -->
+
+
+
+<mat-card class="" style="width: 100%;">
+    <h2 mat-subheader class="text-center">Menu</h2>
+     <mat-action-list role="menu">
+        <mat-divider></mat-divider>
+     <button routerLink="/admin" mat-list-item class="butt1"><mat-icon mat-list-icon >home</mat-icon>Home</button><mat-divider></mat-divider>
+     <button routerLink="profile" mat-list-item class="butt1"><mat-icon mat-list-icon>account_circle</mat-icon><span>User</span></button><mat-divider></mat-divider>
+     <button routerLink="categories" mat-list-item class="butt1"><mat-icon mat-list-icon>category</mat-icon><span>Categories</span></button><mat-divider></mat-divider>
+     <button routerLink="add-categories" mat-list-item class="butt1"><mat-icon mat-list-icon>add_box</mat-icon><span>Add Categories</span></button><mat-divider></mat-divider>
+     <button routerLink="quizes" mat-list-item class="butt1"><mat-icon mat-list-icon>quiz</mat-icon><span>Quizes</span></button><mat-divider></mat-divider>
+     <button routerLink="add-quiz" mat-list-item class="butt1"><mat-icon mat-list-icon>add_circle_outline</mat-icon><span>Quiz</span></button><mat-divider></mat-divider>
+     <button routerLink="profile" mat-list-item class="butt1" (click)="logout()"><mat-icon mat-list-icon >logout</mat-icon><span>Logout</span></button><mat-divider></mat-divider>
+     </mat-action-list>
+     
+ </mat-card>
